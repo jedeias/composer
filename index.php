@@ -2,10 +2,12 @@
 
 require ("vendor/autoload.php");
 
-use Src\App\User;
+use Src\Middleware\User;
 
 $user = new User();
 
-echo $user->create();
+$user->setUserName("name");
+
+echo $user->getUserName();
 
 ?>
